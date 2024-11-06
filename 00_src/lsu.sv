@@ -24,11 +24,10 @@ module lsu (
   output logic [31:0] io_lcd  ,
   output logic        ack     ,
   input  logic [31:0] io_sw   ,
-  input  logic [ 3:0] io_btn  ,
-  output logic [31:0] io_buzzer, 
+  input  logic [ 3:0] io_btn  , 
 
   output logic [17:0]   SRAM_ADDR,
-  inout  logic [15:0]   SRAM_DQ  ,
+  inout        [15:0]   SRAM_DQ  ,
   output logic          SRAM_CE_N,
   output logic          SRAM_WE_N,
   output logic          SRAM_LB_N,
@@ -37,7 +36,7 @@ module lsu (
 );
   
   logic [31:0] rdata_dmem, rd_peri_in, rd_peri, data_rd_temp; 
-  logic 	     wr_en_outperi, wr_en_dmem;
+  logic 	      wr_en_outperi, wr_en_dmem;
   
   assign wr_en_dmem = wr_en && ~addr[14];
   assign wr_en_outperi = wr_en && addr[14] && (addr[11:8] == 4'b0000);
@@ -80,8 +79,7 @@ module lsu (
     .io_hex5   (io_hex5)      ,
     .io_hex6   (io_hex6)      ,
     .io_hex7   (io_hex7)      ,
-    .io_lcd    (io_lcd)       ,
-    .io_buzzer (io_buzzer)    
+    .io_lcd    (io_lcd)          
   );
 
   input_peri per_in (

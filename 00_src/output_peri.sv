@@ -19,8 +19,8 @@ module output_peri (
   output logic [ 6:0] io_hex7,
   output logic [31:0] io_ledr,
   output logic [31:0] io_ledg,
-  output logic [31:0] io_lcd ,
-  output logic [31:0] io_buzzer
+  output logic [31:0] io_lcd 
+
 );
   
   always_ff @(posedge clk) begin 
@@ -36,7 +36,6 @@ module output_peri (
       io_hex6 <= 0;
       io_hex7 <= 0;
       io_lcd  <= 0;
-	    io_buzzer <= 0;
     end else if (wr_en) begin 
       case (addr)
 	  // ledr
@@ -74,13 +73,6 @@ module output_peri (
         if (bmask[1]) io_lcd[15: 8] <= w_data[15: 8];
         if (bmask[0]) io_lcd[ 7: 0] <= w_data[ 7: 0];
       end
-      // buzzer
-      8'h40: begin
-        if (bmask[3]) io_buzzer[31:24] <= w_data[31:24];
-        if (bmask[2]) io_buzzer[23:16] <= w_data[23:16];
-        if (bmask[1]) io_buzzer[15: 8] <= w_data[15: 8];
-        if (bmask[0]) io_buzzer[ 7: 0] <= w_data[ 7: 0];
-      end
       default: begin 
         io_ledr <= io_ledr;
         io_ledg <= io_ledg;
@@ -93,7 +85,6 @@ module output_peri (
         io_hex6 <= io_hex6;
         io_hex7 <= io_hex7;
         io_lcd  <= io_lcd;
-        io_buzzer <= io_buzzer;
       end
       endcase
     end
@@ -101,9 +92,9 @@ module output_peri (
 
   always_comb begin 
   case (addr)
-    8'h00: rd_data[16:0] = io_ledr;
-    8'h10: rd_data[ 7:0] = io_ledg;
-    8'h20: begin
+    8'h00: rd_data = io_ledr;
+    8'h10: rd_data = {{24{1'b0}},io_ledg};
+    /* 8'h20: begin
       rd_data[30:24] = io_hex3;  // 
       rd_data[22:16] = io_hex2;  // 
       rd_data[14: 8] = io_hex1;
@@ -115,8 +106,10 @@ module output_peri (
       rd_data[14: 8] = io_hex5;
       rd_data[ 6: 0] = io_hex4;
     end
+	*/
+	 8'h20: rd_data = {1'b0, io_hex3, 1'b0, io_hex2, 1'b0, io_hex1, 1'b0, io_hex0};
+	 8'h24: rd_data = {1'b0, io_hex7, 1'b0, io_hex6, 1'b0, io_hex5, 1'b0, io_hex4};
     8'h30: rd_data = io_lcd;
-    8'h40: rd_data = io_buzzer;
     default: rd_data = 0;
   	endcase 
   end

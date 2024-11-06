@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2024-11-04T12:05:07.058Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.1.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="uSwslzZWcbsozxfECL62" version="23.1.5" type="device" pages="3">
+<mxfile host="Electron" modified="2024-11-05T10:15:23.685Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.1.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="hZMP8nRCaB228Z-O0xyF" version="23.1.5" type="device" pages="3">
   <diagram name="Trang-1" id="Nf30SVTpma_YpI8OlFPw">
-    <mxGraphModel dx="2982" dy="1722" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="4117" dy="2143" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1394,7 +1394,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="n0WjMVKNKl1iXcRNheMm" name="immidiate cac loai">
-    <mxGraphModel dx="1218" dy="591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="725" dy="313" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1435,7 +1435,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="KvmjlLD4DeXAw4cA9oEB" name="LSU (SRAM)">
-    <mxGraphModel dx="763" dy="1429" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="967" dy="1517" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1848,8 +1848,8 @@
             <mxPoint x="300" y="330" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="yLhKrTP3FCsZAA4rqFO_-29" value="output : 111_0000_xxxx_xxxx&lt;br&gt;input&amp;nbsp; &amp;nbsp; &amp;nbsp; 111_1000_xxxx_xxxx&lt;br&gt;data m: 011_xxxx_xxxx_xxxx" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="540" y="988" width="180" height="60" as="geometry" />
+        <mxCell id="yLhKrTP3FCsZAA4rqFO_-29" value="output : 0111_0000_xxxx_xxxx&lt;br&gt;input&amp;nbsp; &amp;nbsp; &amp;nbsp; 0111_1000_xxxx_xxxx&lt;br&gt;data m: 0011_xxxx_xxxx_xxxx" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="535" y="988" width="190" height="60" as="geometry" />
         </mxCell>
         <mxCell id="yLhKrTP3FCsZAA4rqFO_-30" value="input_peri" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="660" y="650" width="120" height="180" as="geometry" />

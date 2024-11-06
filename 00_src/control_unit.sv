@@ -22,8 +22,8 @@ import opcode_type::*;
   output logic        insn_vld 
 );
   
-  opcode_type_e opcode_type = opcode_type_e'(instr[6:0]);
-  funct3_e funct3_type = funct3_e'(instr[14:12]);
+  opcode_type_e opcode_type;
+  funct3_e funct3_type;
   
   logic [20:0] other_signal;
 
@@ -40,6 +40,9 @@ import opcode_type::*;
           wb_sel} = other_signal;
 
   always_comb begin 
+	 opcode_type = opcode_type_e'(instr[6:0]);
+    funct3_type = funct3_e'(instr[14:12]);
+	 
     case (opcode_type) 
     LUI   : other_signal = 21'b00_1_1_1_1_0_1011_0_1111_111_00; // lui
     AUIPC : other_signal = 21'b00_1_1_1_1_0_0000_0_1111_111_00; // auipc
